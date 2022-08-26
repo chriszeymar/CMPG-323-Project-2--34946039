@@ -4,7 +4,8 @@ API development
  
  This repo serve as source to a API development. It compute in integration with a cloud service in Microsoft Azure 
  
-|Branch:|
- |Main|
- |Devops|
- |Hotfix|
+|Branching     |
+|------------------|
+Main|
+DevOps|
+Hotfix|  
