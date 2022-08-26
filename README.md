@@ -12,5 +12,5 @@ Hotfix|
 
  #**Authentication:**
  Server:
- Username: Admin
+ Username: serverAdmin
  Password: cmpg323
