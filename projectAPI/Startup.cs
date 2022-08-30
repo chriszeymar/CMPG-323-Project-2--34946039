@@ -28,7 +28,8 @@ namespace projectAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<Project2CMPG323_34946039Context>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+            services.AddDbContext<Project2CMPG323_34946039Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Default connection")));
+
             services.AddSwaggerGen(options => { options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyTest Demo API", Version = "v2", Description = "Test demo for students", }); });
         }
 
