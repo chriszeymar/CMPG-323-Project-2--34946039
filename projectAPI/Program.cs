@@ -6,6 +6,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using projectAPI.Models;
+using Microsoft.EntityFrameworkCore;
+using projectAPI.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace projectAPI
 {

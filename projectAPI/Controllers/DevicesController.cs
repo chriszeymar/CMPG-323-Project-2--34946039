@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using projectAPI.Models;
@@ -72,7 +73,35 @@ namespace projectAPI.Controllers
 
             return NoContent();
         }
+        // Patch: api/Devices
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> Update(Guid id,  [FromBody] JsonPatchDocument<Device> device)
+        {
+            
+            //var entity1 = Device.
+            //_context.Update(device).State = EntityState.Modified;
 
+            //_context.Device.Update(device);
+            //device1.ApplyTo(device, ModelState);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!DeviceExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
         // POST: api/Devices
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

@@ -272,3 +272,12 @@ D:\Downloads\CMPG-323-Project-2--34946039-master\CMPG-323-Project-2--34946039-ma
 D:\Downloads\CMPG-323-Project-2--34946039-master\CMPG-323-Project-2--34946039-master\projectAPI\obj\Debug\netcoreapp3.1\projectAPI.dll
 D:\Downloads\CMPG-323-Project-2--34946039-master\CMPG-323-Project-2--34946039-master\projectAPI\obj\Debug\netcoreapp3.1\projectAPI.pdb
 D:\Downloads\CMPG-323-Project-2--34946039-master\CMPG-323-Project-2--34946039-master\projectAPI\obj\Debug\netcoreapp3.1\projectAPI.genruntimeconfig.cache
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\chris\Downloads\Local project\projectAPI\projectAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

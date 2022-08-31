@@ -1,12 +1,16 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 using Microsoft.EntityFrameworkCore.Metadata;
+using projectAPI.Models;
+using projectAPI.Authentication;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace projectAPI.Models
+namespace projectAPI
 {
     public partial class Project2CMPG323_34946039Context : DbContext
     {
@@ -80,4 +84,5 @@ namespace projectAPI.Models
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
+
 }
