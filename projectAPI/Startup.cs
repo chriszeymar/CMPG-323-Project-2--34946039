@@ -37,10 +37,10 @@ namespace projectAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
-            services.AddDbContext<Project2CMPG323_34946039Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Default connection")));
+            services.AddDbContext<Project2CMPG323_34946039Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // For Entity Framework  
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default connection")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             // For Identity  
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -71,9 +71,9 @@ namespace projectAPI
 
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v2", new OpenApiInfo
+            c.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "Project 2",
+                Title = "Project 2 - 34946039",
                 Version = "v1"
             });
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
@@ -119,8 +119,12 @@ namespace projectAPI
             {
                 endpoints.MapControllers();
             });
-            app.UseSwagger(); 
-            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "Project 2 - 34946039"));
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Project 2 - 34946039");
+                //c.RoutePrefix = string.Empty;
+            });
         }
     }
 }
