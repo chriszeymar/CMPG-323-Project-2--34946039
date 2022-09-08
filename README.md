@@ -21,16 +21,26 @@ new_branch|
  
  The swagger support is embedded in code so the link automatically opens in swagger.
  Swagger provides a structured look of the API controllers. 
+ 
  Each controller contains at core:
+ 
  Get method
+ 
+ 
  Put method
+ 
  Delete method 
+ 
  Post method
  
 **Endpoints:**
+
 Authentication 
+
 Devices 
+
 Zones 
+
 Categories
  
  Additional method are provided as per the rubric. 
