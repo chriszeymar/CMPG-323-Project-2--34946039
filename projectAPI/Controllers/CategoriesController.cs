@@ -41,6 +41,37 @@ namespace projectAPI.Controllers
             return category;
         }
 
+        //Patch category
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchCategory(Guid id, Category category)
+        {
+            if (id != category.CategoryId)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(category).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CategoryExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
         // PUT: api/Categories/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

@@ -73,6 +73,36 @@ namespace projectAPI.Controllers
             return NoContent();
         }
 
+        //Patch method
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchZone(Guid id, Zone zone)
+        {
+            if (id != zone.ZoneId)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(zone).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ZoneExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
         // POST: api/Zones
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

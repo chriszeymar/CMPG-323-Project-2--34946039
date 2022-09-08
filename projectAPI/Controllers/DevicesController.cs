@@ -75,14 +75,14 @@ namespace projectAPI.Controllers
         }
         // Patch: api/Devices
         [HttpPatch("{id}")]
-        public async Task<IActionResult> Update(Guid id,  [FromBody] JsonPatchDocument<Device> device)
+        public async Task<IActionResult> PatchDevice(Guid id, Device device)
         {
-            
-            //var entity1 = Device.
-            //_context.Update(device).State = EntityState.Modified;
+            if (id != device.DeviceId)
+            {
+                return BadRequest();
+            }
 
-            //_context.Device.Update(device);
-            //device1.ApplyTo(device, ModelState);
+            _context.Entry(device).State = EntityState.Modified;
 
             try
             {
