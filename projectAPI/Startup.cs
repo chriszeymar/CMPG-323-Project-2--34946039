@@ -123,7 +123,7 @@ namespace projectAPI
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Project 2 - 34946039");
-                //c.RoutePrefix = string.Empty;
+                c.RoutePrefix = string.Empty;
             });
         }
     }
