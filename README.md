@@ -7,10 +7,26 @@ API development
 |Branching     |
 |------------------|
 Main|
-DevOps|
+mmster|
 Hotfix|  
 
  #**Authentication:**
  Server:
- Username: serverAdmin
- Password: Cmpg323@gmail.com
+ Username: 
+ Password: 
+ provided through submission.
+ 
+  #**Use:**
+ The API can be accessed at link : 
+ 
+ The swagger support is embedded in code so the link automaticallyopens in swagger.
+ Swagger provides a structured look of the API controllers. 
+ Each controller contains at core:
+ Get method
+ Put method
+ Delete method 
+ Post method
+ 
+ Additional method are provided as per the rubric. 
+ 
+ **click on try it out to get description of how the method works**
