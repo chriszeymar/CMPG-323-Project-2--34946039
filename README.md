@@ -22,6 +22,8 @@ new_branch|
  The swagger support is embedded in code so the link automatically opens in swagger.
  Swagger provides a structured look of the API controllers. 
  
+ #**API Manager:** https://github.com/chriszeymar/CMPG-323-Project-2--34946039/blob/master/Screenshot%20API%20Manager.jpg
+ 
  Each controller contains at core:
  
  Get method
